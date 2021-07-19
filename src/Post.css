@@ -1,0 +1,89 @@
+.feed__post {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #3333332e;
+  animation-name: fadeIn;
+  animation-duration: 0.75s;
+}
+
+.feed__postHeader {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feed__postHeader .feed__postAvatar {
+  width: 50px;
+  height: 50px;
+}
+
+.feed__postHeader__info h2 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.feed__postHeader__info h2:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.feed__postHeader__info h4 {
+  font-size: 0.8rem;
+  color: grey;
+  font-weight: normal;
+}
+
+.feed__postHeader__info h5 {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: grey;
+}
+
+.feed__postBody {
+  padding: 15px;
+}
+
+.feed__postFooter {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.feed__postIcon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 8px;
+  color: grey;
+}
+
+.feed__postIcon:hover {
+  background-color: #eee;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}

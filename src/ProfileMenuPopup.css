@@ -1,0 +1,105 @@
+.profileMenu {
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  top: 60px;
+  width: 250px;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 25%);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #3333332e;
+  z-index: 5;
+}
+
+.profileMenu__header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileMenu__header .flex-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.profileMenu__header .flex-container .avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.profileMenu__header .flex-container .info .name {
+  font-size: 1.2rem;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.profileMenu__header .flex-container .info .title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.profileMenu__header .btn {
+  width: 90%;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: #2196f3;
+  padding: 5px;
+  cursor: pointer;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.profileMenu__body,
+.profileMenu__bottom {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.profileMenu__body .heading,
+.profileMenu__bottom .heading {
+  font-size: 1rem;
+  padding: 10px;
+  text-transform: capitalize;
+  color: #222;
+}
+
+.profileMenu__body .links,
+.profileMenu__bottom .links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+
+.profileMenu__body .links > li > a,
+.profileMenu__bottom .links > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+}
+
+.profileMenu__body .links > li > a:hover,
+.profileMenu__bottom .links > li > a:hover {
+  text-decoration: underline;
+}
+
+.profileMenu .signout {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.profileMenu .signout:hover {
+  text-decoration: underline;
+}

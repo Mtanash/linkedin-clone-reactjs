@@ -1,0 +1,126 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: sticky;
+  top: 65px;
+}
+
+.sidebar__top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.sidebar__top img {
+  height: 100px;
+  width: 230px;
+  position: absolute;
+  top: -25px;
+  object-fit: cover;
+}
+
+.sidebar__top h2 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.sidebar__top h4 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: grey;
+}
+
+.sidebar .sidebar__avatar {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.sidebar .sidebar__avatar > img {
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.sidebar__line {
+  height: 1px;
+  background-color: #eee;
+  width: 100%;
+}
+
+.sidebar__stats {
+  padding-top: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #fff;
+}
+
+.sidebar__stat {
+  font-size: 0.9rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.sidebar__stat:hover {
+  background-color: #eee;
+}
+
+.sidebar__stat span {
+  margin-left: 15px;
+  color: #3a86ff;
+}
+
+.sidebar__bottom {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 15px 0;
+  padding: 10px 0;
+}
+
+.sidebar__bottom p {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.sidebar__recentItem {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.sidebar__recentItem > p {
+  color: #6c757d;
+}
+
+.sidebar__recentItem:hover > p,
+.sidebar__recentItem:hover > .sidebar__hash {
+  color: #000;
+}
+
+.sidebar__recentItem:hover {
+  background-color: #eee;
+}
+
+.sidebar__hash {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: grey;
+}
