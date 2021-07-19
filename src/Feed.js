@@ -44,6 +44,7 @@ function Feed() {
       db.collection("posts").add({
         name: user.displayName,
         title: user.email,
+        photoUrl: user.photoUrl,
         postText: inputText,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       });
@@ -90,17 +91,19 @@ function Feed() {
         <div className="feed__line"></div>
 
         <div className="feed__postContainer">
-          {posts.map(({ id, data: { name, title, postText, timestamp } }) => {
-            return (
-              <Post
-                key={id}
-                name={name}
-                title={title}
-                postText={postText}
-                photoUrl={user.photoUrl}
-              />
-            );
-          })}
+          {posts.map(
+            ({ id, data: { name, title, photoUrl, postText, timestamp } }) => {
+              return (
+                <Post
+                  key={id}
+                  name={name}
+                  title={title}
+                  postText={postText}
+                  photoUrl={photoUrl}
+                />
+              );
+            }
+          )}
         </div>
       </div>
     );
