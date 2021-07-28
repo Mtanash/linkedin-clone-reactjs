@@ -10,7 +10,6 @@ import SendIcon from "@material-ui/icons/Send";
 import "./Post.css";
 
 function Post({ photoUrl, name, title, postText }) {
-  console.log(photoUrl);
   return (
     <div className="feed__post">
       <div className="feed__postHeader">

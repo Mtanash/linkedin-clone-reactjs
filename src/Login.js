@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { login } from "./features/userSlice";
-import { auth } from "./firebase";
+import { auth, facebookProvider, googleProvider } from "./firebase";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import { FcGoogle } from "react-icons/fc";
 
 import "./Login.css";
 
@@ -23,13 +25,52 @@ function Login() {
             photoUrl: userCredential.user.photoURL,
           })
         );
-        <Redirect to="/feed" />;
+        // <Redirect to="/feed" />;
       })
       .catch((error) => {
         console.log(error.code);
         console.log(error.message);
       });
   };
+
+  const googleLogin = () => {
+    auth
+      .signInWithPopup(googleProvider)
+      .then((userCredential) => {
+        dispatch(
+          login({
+            email: userCredential.user.email,
+            uid: userCredential.user.uid,
+            displayName: userCredential.user.displayName,
+            photoUrl: userCredential.user.photoURL,
+          })
+        );
+      })
+      .catch((error) => {
+        console.log(error.code);
+        console.log(error.message);
+      });
+  };
+
+  const facebookLogin = () => {
+    auth
+      .signInWithPopup(facebookProvider)
+      .then((userCredential) => {
+        dispatch(
+          login({
+            email: userCredential.user.email,
+            uid: userCredential.user.uid,
+            displayName: userCredential.user.displayName,
+            photoUrl: userCredential.user.photoURL,
+          })
+        );
+      })
+      .catch((error) => {
+        console.log(error.code);
+        console.log(error.message);
+      });
+  };
+
   return (
     <div className="login">
       <img
@@ -53,6 +94,14 @@ function Login() {
         />
         <button type="submit">Login</button>
       </form>
+      <button className="facebook__btn" onClick={facebookLogin}>
+        <FacebookIcon />
+        Login with facebook
+      </button>
+      <button className="google__btn" onClick={googleLogin}>
+        <FcGoogle />
+        Login with google
+      </button>
     </div>
   );
 }
