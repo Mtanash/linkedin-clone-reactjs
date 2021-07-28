@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@material-ui/core";
 import Post from "./Post";
-import { auth, db } from "./firebase";
+import { db } from "./firebase";
 import firebase from "firebase";
 
 import ImageIcon from "@material-ui/icons/Image";

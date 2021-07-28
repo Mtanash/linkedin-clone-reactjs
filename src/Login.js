@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Redirect } from "react-router-dom";
 import { login } from "./features/userSlice";
 import { auth, facebookProvider, googleProvider } from "./firebase";
 import FacebookIcon from "@material-ui/icons/Facebook";

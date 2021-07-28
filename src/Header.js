@@ -8,11 +8,8 @@ import WorkIcon from "@material-ui/icons/Work";
 import MessageIcon from "@material-ui/icons/Message";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ProfileMenuPopup from "./ProfileMenuPopup";
-import { selectUser } from "./features/userSlice";
-import { useSelector } from "react-redux";
 
 function Header() {
-  const user = useSelector(selectUser);
   const [show, setShow] = useState(false);
 
   const toggleOptionMenu = () => {
